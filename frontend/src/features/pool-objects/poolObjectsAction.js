@@ -18,12 +18,14 @@ export const addPoolObject = (number) => dispatch => {
 }
 
 export const freePoolObject = (number) => dispatch => {
-  fetchFreePoolObject(number).then(() => dispatch(getAllPoolObjects()))
+  fetchFreePoolObject(number).then(() => dispatch(getAllPoolObjects())).catch(
+    () => alert(`Poll Object with number ${number} doesn't exists`)
+  )
 }
 
 export const getPoolObject = (number) => dispatch => {
   fetchGetPoolObject(number).then(() => dispatch(getAllPoolObjects())).catch(
-    () => alert(`Poll Object with number ${number} already is busy`)
+    () => alert(`Poll Object with number ${number} already is busy or doesn't exists`)
   )
 }
 
