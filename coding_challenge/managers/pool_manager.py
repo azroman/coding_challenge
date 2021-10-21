@@ -5,6 +5,11 @@ from coding_challenge.models import PoolObject
 
 
 class PoolManager:
+    '''
+    I've decided to use DB because DB is the most reliable and consistent. Also all your Pool Objects will be store even you switch-off
+    application or even machine.
+    Disadvantage: speed of getting data from DB less than getting from store in memory.
+    '''
     @staticmethod
     def __get_pool_object__(number):
         poll_objects = PoolObject.objects.filter(number=number)

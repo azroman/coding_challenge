@@ -2,7 +2,7 @@ import django
 from django.test import TestCase
 
 from coding_challenge.exceptions.pool_exceptions import PoolObjectIsBusy, PoolObjectIsNotExists
-from coding_challenge.managers.managers import PoolManager
+from coding_challenge.managers.pool_manager import PoolManager
 
 
 class PoolObjectsTestCase(TestCase):

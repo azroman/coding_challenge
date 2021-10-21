@@ -4,7 +4,7 @@ from rest_framework.views import APIView
 from rest_framework import status
 
 from coding_challenge.exceptions.pool_exceptions import PoolObjectIsBusy, PoolObjectIsNotExists
-from coding_challenge.managers.managers import PoolManager
+from coding_challenge.managers.pool_manager import PoolManager
 from coding_challenge.serializers.pool_serializers import PollSerializer
 
 
